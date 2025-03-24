@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>List Of Names</h1>
+        <input type="text" id="inp" placeholder="Enter your name">
+        <button onclick="handlename()">Submit</button>
+    
+    <br>
+    <br>
+    <br>
+    <div>
+        <table border="2px">
+            <tr>
+                <th>Names</th>
+            </tr>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+</center>
+</body>
+<script>
+    function handlename(){
+       var name= document.getElementById("inp").value
+       if(name==""){
+        alert("Please enter your name")
+        return
+       }
+      var row= document.createElement("tr")
+       var cell=document.createElement("td")
+       cell.innerHTML=name
+       row.appendChild(cell)
+        document.getElementById("tbody").appendChild(row)
+        document.getElementById("inp").value=""
+
+    }
+</script>
+</html>
