@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        background-color: rgb(221, 207, 194);
+        width: 500px;
+        
+        
+    }
+</style>
+<body>
+    <!-- <button onclick="black()">black</button>
+    <button onclick="white()">White</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quo repudiandae blanditiis aperiam eaque deleniti, libero, assumenda expedita optio quidem vel quam architecto! Minus, beatae in! Sed iure vel maiores id ducimus nobis quos molestiae obcaecati eaque reiciendis, inventore, voluptatibus expedita accusantium tempore unde aperiam velit suscipit eius fuga quaerat perferendis, fugit praesentium? Excepturi tenetur atque adipisci sint fugiat dicta mollitia recusandae quod tempore ea sunt expedita nobis perspiciatis quisquam eius, maiores nostrum id provident? Vel quas dolorem quo illo officia non molestias mollitia aliquam dolor voluptatem commodi harum eaque eligendi, blanditiis ex doloribus nemo. Nisi temporibus in tempore placeat.</p> -->
+
+
+<!-- 
+    <div id="box">
+        <button onclick="handleclose()">close</button>
+    </div> -->
+
+
+
+
+    <button onclick="virat()">virat</button>
+    <div class="box">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, doloremque consectetur rerum adipisci beatae minus quae. Suscipit quasi eius accusantium praesentium temporibus repellat voluptatum distinctio impedit atque nemo accusamus non quis odit porro aliquam incidunt doloribus numquam laboriosam magni, eum enim? A aspernatur veniam ipsam nostrum dicta id possimus corrupti quos rerum asperiores culpa amet, harum optio minima? Ipsam, cum. Saepe neque labore modi perferendis, nesciunt impedit ducimus quisquam maiores officia ipsa cupiditate, iusto nemo sint vitae adipisci iure. Deleniti corporis quasi magnam repellat, rerum molestias! Incidunt distinctio quasi optio facilis porro obcaecati numquam deserunt? Accusantium, amet ipsam voluptate placeat maiores laborum consequuntur, reiciendis sequi qui dolores facere tempore? Odit voluptas, nesciunt sit, aliquid perspiciatis fuga vel amet autem dolorum voluptates nam sint et dolore quidem voluptatum numquam vitae ipsam, porro illum magni soluta fugiat repellat eaque enim! Amet dolorum quo iste quam placeat velit accusamus magni quos tempore atque suscipit perferendis, tempora hic dicta adipisci fugit qui nam nisi! In, commodi possimus. Autem ducimus eos labore assumenda, ad omnis adipisci velit quisquam sit quaerat tempore dolorem facere tenetur fuga nostrum ipsum veritatis vero iure, dolore beatae eligendi natus eaque. Corrupti dolores numquam ratione. Voluptas velit dicta error voluptatibus ea?
+    </p>
+    </div>
+
+</body>
+<script>
+    // var styles=document.body.style
+    // function black(){
+
+    //     styles.backgroundColor="black"
+    //     styles.color="white"
+    // }
+    // function white(){
+
+    //     styles.backgroundColor="white"
+    //     styles.color="black"
+    // }
+
+
+
+
+    // function handleclose(){
+    //     document.getElementById("box").style.display="none"
+    // }
+    
+
+    function virat(){
+        var style=document.getElementById("box").style
+        if(style.display=="block")
+    {
+        style.display="none"
+    }
+        else{
+            style.display="block"
+        }
+    }
+</script>
+</html>
