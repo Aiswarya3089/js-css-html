@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="demo"></h1>
+    <h1 class="demo"></h1>
+    <h1 class="demo"></h1>
+    <h1 class="demo"></h1>
+    <h1 class="demo"></h1>
+    <h1></h1>
+    <h1 id="demo"></h1>
+
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+</body>
+<script>
+    //HTML collection in form of array using class namee
+    var res= document.getElementsByClassName("demo")
+    document.getElementsByClassName("demo")[0].innerHTML="Hello Guyzz"
+    document.getElementsByClassName("demo")[1].innerHTML="Its ME"
+    document.getElementsByClassName("demo")[2].innerHTML="How are youu?"
+    console.log(res)
+
+    //HTML collection in form of array using id name
+    var res1= document.getElementsByClassName("demo")
+    document.getElementsByTagName("h2")[0].innerHTML="Okeii byeeee"
+    console.log(res1)
+
+    //Query selector
+    var res2=document.querySelector("#demo")
+    console.log(res2)
+
+
+</script>
+</html>
