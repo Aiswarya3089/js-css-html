@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ar=[{"name": "Kiran", "age": 22},
+        {"name": "Kiran", "age": 23},
+        {"name": "Kiran", "age": 76},
+        {"name": "Aiswarya", "age": 22},
+        {"name": "Kiran", "age": 12},
+        {"name": "Kiran", "age" :2},
+        {"name": "Kiran", "age" :32},
+        {"name": "Kiran", "age" :27},
+        {"name": "Kiran", "age" :29},
+        {"name": "Kiran", "age": 43},
+        {"name": "Kiran", "age" :49},
+        {"name": "Kiran", "age": 50},
+        {"name": "Kiran", "age" :59},
+        {"name": "Kiran", "age" :54}]
+        //filtr
+
+        var filterage = ar.filter((a)=> { return a.age >50})
+        var filtername=ar.filter((r)=>{return r.name=="Aiswarya"})
+        console.log(filterage)
+        console.log(filtername)
+
+    </script>
+</body>
+</html>
