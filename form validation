@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #error1,#error2,#error3{
+        color: red;
+    }
+</style>
+<body>
+    <form id="myform">
+    <label for="">First Name</label>
+    <input type="text" id="inp1">
+    <p id="error1"></p>
+    <label for="">Last Name</label>
+    <input type="text" id="inp2">
+    <p id="error2"></p>
+    <label for="">Password</label>
+    <input type="password" id="pswd">
+    <p id="error3"></p>
+    <button onclick="handlesubmit()">Submit</button>
+</form>
+</body>
+<script>
+    document.getElementById("myform").addEventListener("click",function handlesubmit(e)
+    {
+        e.preventDefault()
+    
+    // function handlesubmit(){
+        var  inp1=document.getElementById("inp1").value
+        var  inp2=document.getElementById("inp2").value
+        var  pswd=document.getElementById("pswd").value
+
+        if (inp1==""){
+            document.getElementById("error1").innerHTML="Fill the form"
+        }
+        else{
+            document.getElementById("error1").innerHTML=""
+        }
+        if (inp2==""){
+            document.getElementById("error2").innerHTML="Fill the form"
+        }
+        else{
+            document.getElementById("error2").innerHTML=""
+        }
+        if (pswd.length<7){
+            document.getElementById("error3").innerHTML="password must be of 7 characters"
+        }
+        else{
+            document.getElementById("error3").innerHTML=""
+        }
+
+    })
+</script>
+</html>
