@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #frm{
+        background-color: antiquewhite;
+        padding-left: 10px;
+        border: 5px solid black;
+        border-radius: 10px;
+        width: 500px;
+        
+    }
+    .inp,.mid,.numb,.pswd,.pswd1,.age{
+        padding-left: 50px;
+        border-radius: 5px;
+        
+    }
+    button{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bold;
+        background-color: bisque;
+        cursor: pointer;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+    button:active{
+        background-color: white;
+    }
+    .err{
+        color: red;
+
+    }
+</style>
+<body>
+    <form id="frm">
+        <center><h1 id="head">Please enter your personal details</h1></center>
+        <label for="">Enter your First Name</label>
+        <input type="text" class="inp" id="fn">
+        <p id="error1" class="err"></p>
+        <label for="">Enter your Middle Name</label>
+        <input type="text" class="mid">
+        <p ></p>
+        <label for="">Enter your Last Name</label>
+        <input type="text" class="inp" id="ln">
+        <p id="error2" class="err"></p>
+        <label for="">Enter your Father's Name</label>
+        <input type="text" class="inp" id="fdn">
+        <p id="error3" class="err"></p>
+        <label for="">Enter your Mother's Name</label>
+        <input type="text" class="inp" id="mdn">
+        <p id="error4" class="err"></p>
+        <label for="">Enter your age</label>
+        <input type="number" class="age" id="age">
+        <p id="error5" class="err"></p>
+        <label for="">Enter your profession</label>
+        <input type="text" name="" id="prf" class="inp">
+        <p id="error6" class="err"></p>
+        <label for="">Enter your highest qualification</label>
+        <input type="text" class="inp" id="qua">
+        <p id="error7" class="err"></p>
+        <label for="">Enter your Skills</label>
+        <input type="text" class="inp" id="skil">
+        <p id="error8" class="err"></p>
+        <label for="">Enter your hobbies</label>
+        <input type="text" class="inp" id="hob">
+        <p id="error9" class="err"></p>
+        <label for="">Enter your Address</label>
+        <input type="text"class="inp" id="addr">
+        <p id="error10" class="err"></p>
+        <label for="">Enter your phone number</label>
+        <input type="number" class="numb" id="num">
+        <p id="error11" class="err"></p>
+        <label for="">Create your own password</label>
+        <input type="password" name="" class="pswd" id="pswd">
+        <p id="error12" class="err"></p>
+        <label for="">Re-enter your password</label>
+        <input type="password" name="" class="pswd1" id="pswd1">
+        <p id="error13" class="err"></p>
+        <center>
+        <button type="submit">Submit</button>
+    </center>
+    </form>
+</body>
+<script>
+    document.getElementById("frm").addEventListener("submit",function handlesubmit(e)
+
+    {
+   
+    e.preventDefault()
+        var  fn=document.getElementById("fn").value
+        var  ln=document.getElementById("ln").value
+        var  fdn=document.getElementById("fdn").value
+        var  mdn=document.getElementById("mdn").value
+        var  age=Number(document.getElementById("age").value)
+        var  prf=document.getElementById("prf").value
+        var  qua=document.getElementById("qua").value
+        var  skil=document.getElementById("skil").value
+        var  hob=document.getElementById("hob").value
+        var  addr=document.getElementById("addr").value
+        var  num=document.getElementById("num").value
+        var  pswd=document.getElementById("pswd").value
+        var  pswd1=document.getElementById("pswd1").value
+        
+
+        if (fn==""){
+            document.getElementById("error1").innerHTML="Please anter your first name"
+        }
+        else{
+            document.getElementById("error1").innerHTML=""
+        }
+
+
+        if (ln==""){
+            document.getElementById("error2").innerHTML="Please enter your last name"
+        }
+        else{
+            document.getElementById("error2").innerHTML=""
+        }
+
+
+        if (fdn==""){
+            document.getElementById("error3").innerHTML="Please enter your father's name"
+        }
+        else{
+            document.getElementById("error3").innerHTML=""
+        }
+
+
+        if (mdn==""){
+            document.getElementById("error4").innerHTML="Please enter your Mother's name"
+        }
+        else{
+            document.getElementById("error4").innerHTML=""
+        }
+
+        if (age=="" || age>100){
+            document.getElementById("error5").innerHTML="Please enter your age correctly"
+        }
+        else{
+            document.getElementById("error5").innerHTML=""
+        }
+
+        if (prf==""){
+            document.getElementById("error6").innerHTML="Please enter your Proffession"
+        }
+        else{
+            document.getElementById("error6").innerHTML=""
+        }
+
+        if (qua==""){
+            document.getElementById("error7").innerHTML="Please enter your qualification correctly"
+        }
+        else{
+            document.getElementById("error7").innerHTML=""
+        }
+
+        if (skil==""){
+            document.getElementById("error8").innerHTML="Please enter your skills"
+        }
+        else{
+            document.getElementById("error8").innerHTML=""
+        }
+
+        if (hob==""){
+            document.getElementById("error9").innerHTML="Please enter your hobbbies"
+        }
+        else{
+            document.getElementById("error9").innerHTML=""
+        }
+
+        if (addr==""){
+            document.getElementById("error10").innerHTML="Please enter your Address"
+        }
+        else{
+            document.getElementById("error10").innerHTML=""
+        }
+
+        if (num=="" || num.length!=10){
+            document.getElementById("error11").innerHTML="Please enter your phne number correctly"
+        }
+        else{
+            document.getElementById("error11").innerHTML=""
+        }
+
+
+        if (pswd.length<7){
+            document.getElementById("error12").innerHTML="password must be of 7 characters"
+        }
+        else{
+            document.getElementById("error12").innerHTML=""
+        }
+
+        if (pswd!=pswd1){
+            document.getElementById("error13").innerHTML="The password is not same "
+        }
+        else{
+            document.getElementById("error13").innerHTML=""
+        }
+
+    }
+)
+</script>
+</html>
