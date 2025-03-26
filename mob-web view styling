@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #nav{
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        background-color: black;
+        height: 30px;
+        padding-top: 11px;
+        color: white;
+        border-radius: 5px;
+    
+    }
+    #nav li{
+        cursor: pointer;
+    }
+    #nav li:hover{
+        color: antiquewhite;
+    }
+    #slidebar{
+        display: none;
+        background-color: black;
+        color: white;
+        width: 100px;
+        height: 100px;
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+    #btn button{
+        background-color: rgb(24, 23, 23);
+        color: aliceblue ;
+        border: 2px solid;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #btn button:hover{
+        color: rgb(218, 76, 116);
+    }
+    #slidebar li{
+        cursor: pointer;
+    }
+    #slidebar li:hover{
+        color: rosybrown;
+    }
+    #btn{
+        display: none;
+    }
+    @media all and (max-width : 480px)
+    {
+        #nav{
+            display: none;
+        }
+        #btn{
+            display: block;
+        }
+        
+    }
+
+</style>
+<body>
+    <nav>
+        <div id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Careers</li>
+            <li>Contact</li>
+            <li>Locations</li>
+        </div>
+        <div id="btn"><button onclick="openbar()">&#9776;</button></div>
+    </nav>
+    <slidebar id="slidebar">
+            <li>Home</li>
+            <li>About</li>
+            <li>Careers</li>
+            <li>Contact</li>
+            <li>Locations</li>
+    </slidebar>
+</body>
+<script>
+    function openbar()
+    {
+        var br=document.getElementById("slidebar")
+        if(br.style.display=="none")
+    {
+        br.style.display="block"
+    }
+    else{
+        br.style.display="none"
+    }
+    }
+</script>
+</html>
